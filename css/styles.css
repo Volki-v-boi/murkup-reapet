@@ -1,0 +1,84 @@
+:root {
+  --font-family: "Inter", sans-serif;
+  --second-family: "Montserrat", sans-serif;
+  --font-color: #fff;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-family: var(--font-family);
+}
+
+body {
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+/* -----------------------Navigation---------------------- */
+.navigation {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  width: 1280px;
+  height: 72px;
+  margin-top: 26px;
+  padding: 0 16px;
+  backdrop-filter: blur(35px);
+  background: linear-gradient(
+    99deg,
+    rgba(0, 197, 235, 0.3) 0%,
+    rgba(181, 68, 254, 0.3) 100%
+  );
+}
+
+.logo {
+  font-weight: 400;
+  font-size: 28px;
+  color: #fff;
+}
+
+.nav-list {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  margin-left: auto;
+  font-weight: 400;
+  font-size: 12px;
+  color: #fff;
+}
+
+/* -----------------------Hero Section---------------------- */
+.hero {
+  background-color: #06071b;
+  padding: 0 16px;
+  color: var(--font-color);
+}
+
+.hero-title {
+  font-weight: 700;
+  font-size: 40px;
+  padding-top: 251px;
+}
+
+.hero-description {
+  font-weight: 700;
+  font-size: 20px;
+}
+
+.hero-descr-list {
+  font-weight: 400;
+  font-size: 14px;
+}
