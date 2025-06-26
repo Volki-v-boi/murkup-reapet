@@ -131,6 +131,8 @@ button {
 }
 
 .hero-btn {
+  position: relative;
+  z-index: 0;
   border: none;
   border-radius: 5px;
   font-family: "Inter", sans-serif;
@@ -138,7 +140,27 @@ button {
   font-size: 16px;
   padding: 12px 60px;
   color: #fff;
-  background: linear-gradient(99deg, #00c5eb 0%, #b544fe 100%);
+  background: linear-gradient(99deg, #00c5eb, #b544fe);
+  background-clip: padding-box;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.hero-btn::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 5px;
+  padding: 1px;
+  background: linear-gradient(99deg, #00c5eb, #b544fe);
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: destination-out;
+  mask-composite: exclude;
+  z-index: -1;
+}
+
+.hero-btn:hover {
+  background: #06071b;
 }
 
 .screen-decor {
@@ -297,6 +319,8 @@ button {
   margin-top: 100px;
   padding-left: 16px;
   padding-top: 60px;
+  padding-bottom: 98px;
+  margin-bottom: 80px;
 }
 
 .video-title {
@@ -306,6 +330,7 @@ button {
   color: #fff;
 }
 .video-description {
+  margin-bottom: 40px;
   display: block;
   max-width: 479px;
   margin-top: 20px;
@@ -316,5 +341,82 @@ button {
   text-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25), 0 4px 4px 0 rgba(0, 0, 0, 0.25);
 }
 .video-img {
+  position: absolute;
+  right: 121px;
+  top: 60px;
 }
-/* ___________________________________? */
+.icons-container {
+  display: flex;
+  gap: 20px;
+}
+
+.video-icon {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: linear-gradient(99deg, #00c5eb 0%, #b544fe 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.icons {
+  fill: #fff;
+}
+
+/* ____________Team section_______________________? */
+.team-title {
+  text-align: center;
+  margin-bottom: 80px;
+}
+.team-description {
+  font-family: "Inter", sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  text-align: center;
+  max-width: 886px;
+  margin: 0 auto;
+}
+.team-list {
+  margin-top: 56px;
+  display: flex;
+  gap: 32px;
+  justify-content: center;
+  align-items: center;
+}
+.team-list-item {
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  border-radius: 15px;
+  width: 288px;
+  height: 364px;
+  backdrop-filter: blur(35px);
+  background: #06071b
+    linear-gradient(
+      318deg,
+      rgba(0, 197, 235, 0.5) 0%,
+      rgba(181, 68, 254, 0.5) 100%
+    );
+}
+.team-img {
+  border-radius: 12px;
+}
+.item-title {
+  font-family: "Inter", sans-serif;
+  font-weight: 700;
+  font-size: 18px;
+  color: #fff;
+  text-align: center;
+}
+.item-descr {
+  font-family: "Inter", sans-serif;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.71429;
+  text-align: center;
+  color: #fff;
+}
+/* ____________Team section_______________________? */
